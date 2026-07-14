@@ -21,7 +21,7 @@ const ProtectedRoute = lazy(
 const AppLayout = lazy(() => import("../components/layout/AppLayout"));
 
 // Modules
-// const Dashboard = lazy(() => import("../pages/Dashboard"));
+const Dashboard = lazy(() => import("../features/dashboard/Pages/Dashboard"));
 // const Students = lazy(() => import("../pages/Students"));
 // const Faculty = lazy(() => import("../pages/Faculty"));
 // const Departments = lazy(() => import("../pages/Departments"));
@@ -62,12 +62,12 @@ const AppRoutes = () => {
                 {/* Protected Routes */}
                 <Route element={<ProtectedRoute />}>
                     <Route element={<AppLayout />}>
-                        {/* <Route
+                        <Route
                             path="/"
                             element={<Navigate to="/dashboard" replace />}
                         />
                         <Route path="/dashboard" element={<Dashboard />} />
-                        <Route path="/students" element={<Students />} />
+                        {/* <Route path="/students" element={<Students />} />
                         <Route path="/faculty" element={<Faculty />} />
                         <Route path="/departments" element={<Departments />} />
                         <Route path="/subjects" element={<Subjects />} />

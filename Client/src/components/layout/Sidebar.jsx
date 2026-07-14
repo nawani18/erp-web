@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import * as Icons from "lucide-react";
 import { sidebarConfig } from "../../config/sidebar";
-import useAuthStore from "../../store/authStore";
+import useAuthStore from "../../store/useAuthStore";
 import { cn } from "../../lib/utils"; // Assuming cn utility is available, fallback to standard template literals if not
 
 const Sidebar = ({ isMobileOpen, onCloseMobile }) => {

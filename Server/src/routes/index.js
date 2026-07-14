@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { router as authRoutes } from "../modules/auth/index.js";
+import dashBoardRoutes  from "../modules/dashboard/dashboard.routes.js";
 
 /**
  * src/routes/index.js
@@ -11,6 +12,7 @@ const router = Router();
 
 // Authentication Routes
 router.use("/auth", authRoutes);
+router.use("/dashboard", dashBoardRoutes);
 
 // Placeholder for future modules (Scalability)
 // router.use('/students', studentRoutes);
