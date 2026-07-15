@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 
 import App from "./App.jsx";
 import "./styles/index.css";
@@ -24,7 +24,14 @@ createRoot(document.getElementById("root")).render(
             <BrowserRouter>
                 <App />
                 {/* Toaster is placed high in the tree but inside providers so it can be called anywhere */}
-                <Toaster position="top-right" reverseOrder={false} />
+                <ToastContainer
+                    position="top-right"
+                    autoClose={3000}
+                    newestOnTop={true}
+                    closeOnClick={true}
+                    pauseOnHover={true}
+                    theme="light"
+                />
             </BrowserRouter>
         </QueryClientProvider>
     </StrictMode>,

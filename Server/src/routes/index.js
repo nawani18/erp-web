@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { router as authRoutes } from "../modules/auth/index.js";
-import dashBoardRoutes  from "../modules/dashboard/dashboard.routes.js";
+import dashBoardRoutes from "../modules/dashboard/dashboard.routes.js";
+import { router as departmentRoutes } from "../modules/departments/index.js";
 
 /**
  * src/routes/index.js
@@ -12,12 +13,16 @@ const router = Router();
 
 // Authentication Routes
 router.use("/auth", authRoutes);
+
+// Dashboard Routes
 router.use("/dashboard", dashBoardRoutes);
+
+// Department Routes
+router.use("/departments", departmentRoutes);
 
 // Placeholder for future modules (Scalability)
 // router.use('/students', studentRoutes);
 // router.use('/faculty', facultyRoutes);
-// router.use('/departments', departmentRoutes);
 // router.use('/subjects', subjectRoutes);
 // router.use('/attendance', attendanceRoutes);
 // router.use('/results', resultRoutes);

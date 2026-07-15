@@ -12,6 +12,18 @@ export const adminNavigation = [
         title: "Departments",
         icon: "Building2",
         path: "/departments",
+        children: [
+            {
+                id: "departments-list",
+                title: "Department List",
+                path: "/departments",
+            },
+            {
+                id: "departments-add",
+                title: "Add Department",
+                path: "/departments/add",
+            },
+        ],
     },
     { id: "subjects", title: "Subjects", icon: "BookOpen", path: "/subjects" },
     {

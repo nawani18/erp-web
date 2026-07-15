@@ -22,9 +22,20 @@ const AppLayout = lazy(() => import("../components/layout/AppLayout"));
 
 // Modules
 const Dashboard = lazy(() => import("../features/dashboard/Pages/Dashboard"));
+
+// Departments Module
+const DepartmentList = lazy(
+    () => import("../features/departments/Pages/DepartmentList"),
+);
+const AddDepartment = lazy(
+    () => import("../features/departments/Pages/AddDepartment"),
+);
+const EditDepartment = lazy(
+    () => import("../features/departments/Pages/EditDepartment"),
+);
+
 // const Students = lazy(() => import("../pages/Students"));
 // const Faculty = lazy(() => import("../pages/Faculty"));
-// const Departments = lazy(() => import("../pages/Departments"));
 // const Subjects = lazy(() => import("../pages/Subjects"));
 // const Attendance = lazy(() => import("../pages/Attendance"));
 // const Timetable = lazy(() => import("../pages/Timetable"));
@@ -67,9 +78,23 @@ const AppRoutes = () => {
                             element={<Navigate to="/dashboard" replace />}
                         />
                         <Route path="/dashboard" element={<Dashboard />} />
+
+                        {/* Department Routes */}
+                        <Route
+                            path="/departments"
+                            element={<DepartmentList />}
+                        />
+                        <Route
+                            path="/departments/add"
+                            element={<AddDepartment />}
+                        />
+                        <Route
+                            path="/departments/:id/edit"
+                            element={<EditDepartment />}
+                        />
+
                         {/* <Route path="/students" element={<Students />} />
                         <Route path="/faculty" element={<Faculty />} />
-                        <Route path="/departments" element={<Departments />} />
                         <Route path="/subjects" element={<Subjects />} />
                         <Route path="/attendance" element={<Attendance />} />
                         <Route path="/timetable" element={<Timetable />} />
