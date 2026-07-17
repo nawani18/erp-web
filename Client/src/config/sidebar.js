@@ -25,7 +25,24 @@ export const adminNavigation = [
             },
         ],
     },
-    { id: "subjects", title: "Subjects", icon: "BookOpen", path: "/subjects" },
+    {
+        id: "subjects",
+        title: "Subjects",
+        icon: "BookOpen",
+        path: "/subjects",
+        children: [
+            {
+                id: "subject-list",
+                title: "Subject List",
+                path: "/subjects",
+            },
+            {
+                id: "add-subject",
+                title: "Add Subject",
+                path: "/subjects/add",
+            },
+        ],
+    },
     {
         id: "attendance",
         title: "Attendance",

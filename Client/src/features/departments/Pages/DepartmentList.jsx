@@ -22,6 +22,7 @@ const DepartmentList = () => {
     const [deleteId, setDeleteId] = useState(null);
 
     const { data, isLoading, error } = useDepartments(search, page, limit);
+    console.log(data);
 
     const { mutate: deleteDepartment, isLoading: isDeleting } =
         useDeleteDepartment();
